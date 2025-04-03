@@ -139,6 +139,19 @@ const MenuForm = ({ setMenuData, prevStep, handleSubmit }) => {
       navigate("/");
     }
   };
+   
+  // const handleFinalSubmit = async () => {
+  //   if (validateForm()) {
+  //     setMenuData([...menus]);
+  
+  //     console.log("Final menu data being sent:", menus); // ✅ Debugging line
+  
+  //     // await handleSubmit([...menus]);
+  //     await handleSubmit();
+  //     setMenus([{ menuName: "", price: "", category: "" }]);
+  //     navigate("/");
+  //   }
+  // };
 
   return (
     <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-6 border-t-4 border-orange-600">
