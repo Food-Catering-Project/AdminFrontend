@@ -55,6 +55,15 @@ const Home = () => {
           >
             About us
           </Link>
+
+
+          <Link
+            to="/login"
+            className="px-6 py-3 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out"
+          >
+            Admin Login
+          </Link>
+          
         </div>
       </div>
     </div>
