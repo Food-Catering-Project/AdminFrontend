@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 const Login = () => {
   const [name, setName] = useState("");
@@ -70,6 +72,14 @@ const Login = () => {
             Login
           </button>
         </form>
+
+          {/* Forgot Password Link */}
+         <div className="text-center mt-4">
+          <Link to="/forgot-password" className="text-orange-600 hover:underline">
+            Forgot Password?
+          </Link>
+        </div> 
+
       </div>
     </div>
   );

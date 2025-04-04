@@ -32,7 +32,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-orange-500 to-red-600 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-orange-200 to-red-600 p-6">
       <div className="bg-white bg-opacity-90 backdrop-blur-lg shadow-xl rounded-2xl p-10 max-w-3xl text-center">
         <h1 className="text-5xl font-extrabold text-gray-800 mb-4">
           Welcome to the <span className="text-orange-600">Admin Panel</span>
