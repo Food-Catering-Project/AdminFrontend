@@ -17,8 +17,7 @@ const VerifyOTP = () => {
     try {
       // API call to verify OTP
       const response = await axios.post(
-        "http://localhost:8007/admin/api/owner/verify-otp",
-        { phoneNumber, otp }
+        `http://localhost:8007/admin/api/owner/forgot-password/verify-otp?number=${phoneNumber}&otp=${otp}`
       );
 
       setMessage(response.data.message);

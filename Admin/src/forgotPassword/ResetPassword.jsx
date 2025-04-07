@@ -17,8 +17,7 @@ const ResetPassword = () => {
     try {
       // API call to reset password
       const response = await axios.post(
-        "http://localhost:8007/admin/api/owner/reset-password",
-        { phoneNumber, newPassword }
+        `http://localhost:8007/admin/api/owner/forgot-password/reset-password?number=${phoneNumber}&newPassword=${newPassword}`
       );
 
       setMessage(response.data.message);

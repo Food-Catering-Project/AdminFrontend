@@ -15,9 +15,9 @@ const ForgotPassword = () => {
     try {
       // API call to check if number exists and send OTP
       const response = await axios.post(
-        "http://localhost:8007/admin/api/owner/send-otp",
-        { phoneNumber }
+        `http://localhost:8007/admin/api/owner/forgot-password/send-otp?number=${phoneNumber}`
       );
+      
 
       setMessage(response.data.message);
       setError("");
