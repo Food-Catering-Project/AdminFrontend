@@ -4,12 +4,12 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const MenuForm = ({ setMenuData, prevStep, handleSubmit }) => {
-  const [menus, setMenus] = useState([{ menuName: "", price: "", category: "" }]);
+  const [menus, setMenus] = useState([{ menuName: "", price: "", category: "" , imgUrl: "" }]);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
   const addMenu = () => {
-    setMenus([...menus, { menuName: "", price: "", category: "" }]);
+    setMenus([...menus, { menuName: "", price: "", category: "" , imgUrl: "" }]);
   };
 
   const handleChange = (index, e) => {
@@ -41,7 +41,7 @@ const MenuForm = ({ setMenuData, prevStep, handleSubmit }) => {
     if (validateForm()) {
       setMenuData([...menus]);
       handleSubmit([...menus]);
-      setMenus([{ menuName: "", price: "", category: "" }]);
+      setMenus([{ menuName: "", price: "", category: "", imgUrl: ""  }]);
       navigate("/");
     }
   };
@@ -101,6 +101,21 @@ const MenuForm = ({ setMenuData, prevStep, handleSubmit }) => {
               />
               {errors[`${index}-category`] && <p className="text-red-500 text-sm">{errors[`${index}-category`]}</p>}
             </div>
+
+            <div>
+              <input
+                name="imgUrl"
+                placeholder="Image URL"
+                value={menu.imgUrl}
+                onChange={(e) => handleChange(index, e)}
+                className="border border-gray-300 p-2 rounded-lg focus:ring-2 focus:ring-orange-400 outline-none w-full"
+                required
+              />
+              {errors[`${index}-imgUrl`] && (
+                <p className="text-red-500 text-sm">{errors[`${index}-imgUrl`]}</p>
+              )}
+            </div>
+            
           </div>
         </div>
       ))}

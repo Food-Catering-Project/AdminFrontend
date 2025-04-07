@@ -40,7 +40,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-orange-500 to-red-500 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-orange-200 to-red-500 p-6">
       <div className="bg-white p-10 rounded-xl shadow-2xl w-full max-w-md">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Admin Login</h2>
 

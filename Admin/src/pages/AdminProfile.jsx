@@ -73,7 +73,7 @@ const AdminProfile = () => {
           )}
         </div>
 
-        {/* Restaurant Details */}
+        {/* Restaurant Details
         <div className="bg-white shadow-md rounded-lg p-6 border-l-4 border-orange-500">
           <h2 className="text-2xl font-semibold text-gray-700 flex items-center gap-3 mb-4">
             <FaStore className="text-orange-500" /> Restaurant Details
@@ -88,9 +88,37 @@ const AdminProfile = () => {
           ) : (
             <p className="text-gray-500">Loading restaurant details...</p>
           )}
+        </div> */}
+
+        {/* Restaurant Details */}
+        <div className="bg-white shadow-md rounded-lg p-6 border-l-4 border-orange-500">
+          <h2 className="text-2xl font-semibold text-gray-700 flex items-center gap-3 mb-4">
+            <FaStore className="text-orange-500" /> Restaurant Details
+          </h2>
+          {restaurant ? (
+            <div className="text-gray-700 space-y-4">
+              <div className="w-full flex justify-center">
+                <img
+                  src={restaurant.imgUrl}
+                  alt={restaurant.name}
+                  className="rounded-lg w-full max-w-md object-cover h-60 shadow"
+                />
+              </div>
+
+              <div className="space-y-2 pt-4">
+                <p><strong>Restaurant Name:</strong> {restaurant.name}</p>
+                <p><strong>Number:</strong> {restaurant.number}</p>
+                <p><strong>Location:</strong> {restaurant.address}</p>
+                <p><strong>Rating:</strong> ⭐ {restaurant.rating}</p>
+              </div>
+            </div>
+          ) : (
+            <p className="text-gray-500">Loading restaurant details...</p>
+          )}
         </div>
 
-        {/* Menu Details */}
+
+        {/* Menu Details
         <div className="bg-white shadow-md rounded-lg p-6 border-l-4 border-orange-500">
           <h2 className="text-2xl font-semibold text-gray-700 flex items-center gap-3 mb-4">
             <FaUtensils className="text-orange-500" /> Menu Items
@@ -108,9 +136,36 @@ const AdminProfile = () => {
           ) : (
             <p className="text-gray-500">Loading menu details...</p>
           )}
+        </div> */}
+
+        {/* Menu Details */}
+        <div className="bg-white shadow-md rounded-lg p-6 border-l-4 border-orange-500">
+          <h2 className="text-2xl font-semibold text-gray-700 flex items-center gap-3 mb-4">
+            <FaUtensils className="text-orange-500" /> Menu Items
+          </h2>
+          {menus.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {menus.map((menu) => (
+                <div key={menu.id} className="bg-gray-100 shadow-lg rounded-lg p-4 border">
+                  {/* Image Preview */}
+                  <img
+                    src={menu.imgUrl}
+                    alt={menu.menuName}
+                    className="w-full h-48 object-cover rounded-lg mb-3"
+                  />
+
+                  {/* Menu Info */}
+                  <h3 className="text-lg font-semibold text-gray-800">{menu.menuName}</h3>
+                  <p className="text-gray-600">Category: {menu.category}</p>
+                  <p className="text-green-600 font-semibold mt-2">₹{menu.price}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-gray-500">Loading menu details...</p>
+          )}
         </div>
 
-    
       </div>
     </div>
   );
