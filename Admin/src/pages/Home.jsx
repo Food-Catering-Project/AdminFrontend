@@ -1,32 +1,3 @@
-// import { Link } from "react-router-dom";
-
-// const Home = () => {
-//   return (
-//     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-//       <h1 className="text-4xl font-bold mb-6 text-gray-800">Admin Panel - Food Catering</h1>
-//       <p className="text-lg text-gray-600 mb-4">Manage restaurants, menus, and orders from one place.</p>
-      
-//       <div className="flex space-x-6">
-//         <Link
-//           to="/register"
-//           className="px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition"
-//         >
-//           Register a Restaurant
-//         </Link>
-        
-//         <Link
-//           to="/dashboard"
-//           className="px-6 py-3 bg-gray-700 text-white text-lg font-semibold rounded-lg hover:bg-gray-800 transition"
-//         >
-//           Go to Dashboard
-//         </Link>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Home;
-
 
 import { Link } from "react-router-dom";
 
@@ -58,10 +29,10 @@ const Home = () => {
 
 
           <Link
-            to="/login"
+            to="/seeAllRestaurants"
             className="px-6 py-3 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out"
           >
-            Admin Login
+            Registered Restaurants
           </Link>
           
         </div>

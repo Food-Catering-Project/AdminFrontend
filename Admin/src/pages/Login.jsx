@@ -34,7 +34,7 @@ const Login = () => {
 
       // Redirect to dashboard or profile
       navigate("/admin-profile");
-    } catch (err) {
+    } catch {
       setError("Invalid credentials. Please try again.");
     }
   };
